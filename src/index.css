@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Theme Tokens */
+@theme {
+  /* Colors */
+  --color-greenhead: #355B2F;
+  --color-whitetext: #FFFFFF;
+  --color-tanback: #C4BCA5;
+  --color-lighttanback: #E1D8BE;
+  --color-greentxt: #174F14;
+  --color-tantxt: #80530E;
+  --color-offwhite: #EAE7DF;
+
+  /* Font Styles */
+  --font-inria: "Inria Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-instrument: "Instrument Sans", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
