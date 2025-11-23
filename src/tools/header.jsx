@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import logo from '../assets/issalogo.png';
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
 
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
@@ -14,12 +16,13 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: "#about", label: "About" },
-    { href: "#executives", label: "Executives" },
-    { href: "#events", label: "Events" },
-    { href: "#faq", label: "FAQ" },
-    { href: "#contact", label: "Contact" },
-    { href: "#resources", label: "Resources" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/executives", label: "Executives" },
+    { href: "/events", label: "Events" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/contact", label: "Contact" },
+    { href: "/resources", label: "Resources" },
   ];
 
   return (
@@ -30,11 +33,25 @@ export default function Navbar() {
         <div className="flex h-10 items-center justify-between">
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-25">
-            {links.map((l) => (
-              <a key={l.href} href={l.href} className="text-base text-white hover:text-lighttanback transition-colors font-instrument">
-                {l.label}
-              </a>
-            ))}
+            {links.map((l) => {
+              const isActive = location.pathname === l.href;
+
+              return (
+                <Link
+                  key={l.href}
+                  to={l.href}
+                  className={
+                    "text-base font-instrument transition-colors " +
+                    (isActive 
+                      ? "text-darkgreenhead underline underline-offset-8 decoration-2" 
+                      : "text-white hover:text-darkgreenhead"
+                    )
+                  }
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Mobile menu button */}
@@ -72,14 +89,9 @@ export default function Navbar() {
         <div className="md:hidden border-t border-white/5 bg-white">
           <nav className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2 text-browntxt/90 hover:bg-white/5 font-instrument"
-              >
+              <Link key={l.href} to={l.href} onClick={() => setOpen(false)} className="rounded-md px-3 py-2 text-browntxt/90 hover:bg-white/5 font-instrument">
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
