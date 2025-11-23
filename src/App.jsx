@@ -1,38 +1,22 @@
-import { useState } from 'react'
 import './App.css'
-import Hero from './components/hero.jsx'
-import About from './components/hero.jsx'
-import Executives from './components/executives.jsx'
-import Events from './components/events.jsx'
-import Faq from './components/faq.jsx'
-import Contact from './components/contact.jsx'
-import Resources from './components/resources.jsx'
+import Hero from './content/Hero.jsx'
+// import About from './content/Hero.jsx'
+// import Executives from './content/Executives.jsx'
+// import Events from './content/Events.jsx'
+// import Faq from './content/FAQ.jsx'
+// import Contact from './content/Contact.jsx'
+// import Resources from './content/Resources.jsx'
+import { default as Navbar }  from './tools/Header.jsx';
+import { default as Footer }  from './tools/Footer.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className="">
-        {/* Header */}
-        <div className="">
-          
-        </div>
-
-        {/* Output Container */}
-        <div className="">
-          <Routes>
-            <Route path="/home" element={<Hero />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/executives" element={<Executives />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/faq" element={<Faq />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/resources" element={<Resources />} />
-          </Routes>
-        </div>
-      </div>
-    </>
+    <div>
+      <Navbar />
+      <Hero />
+      <Footer />
+    </div>
   )
 }
 
