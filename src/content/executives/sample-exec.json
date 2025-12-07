@@ -2,5 +2,6 @@
     "name": "Sample Exec",
     "role": "Co-President",
     "bio": "This is a placeholder executive for testing.",
-    "photo": ""
+    "photo": "",
+    "vacant":false
   }  

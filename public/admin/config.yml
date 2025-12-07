@@ -29,6 +29,7 @@ collections:
       - { name: "role", label: "Role", widget: "string" }
       - { name: "bio", label: "Bio", widget: "text", required: false }
       - { name: "photo", label: "Photo", widget: "image", required: false }
+      - { name: "vacant", label: "Vacant Position", widget: "boolean", default: false }
 
   - name: "faq"
     label: "FAQ"
