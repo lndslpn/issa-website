@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "events"
@@ -27,35 +27,25 @@ collections:
     fields:
       - { name: "name", label: "Name", widget: "string" }
       - { name: "role", label: "Role", widget: "string" }
-      - { name: "bio", label: "Bio", widget: "text" }
-      - { name: "photo", label: "Photo", widget: "image" }
+      - { name: "bio", label: "Bio", widget: "text", required: false }
+      - { name: "photo", label: "Photo", widget: "image", required: false }
 
   - name: "faq"
     label: "FAQ"
-    folder: "src/content/FAQ"
+    folder: "src/content/faq"
     format: "json"
     create: true
     slug: "{{slug}}"
     fields:
       - { name: "question", label: "Question", widget: "string" }
-      - { name: "answer", label: "Answer", widget: "string" }
+      - { name: "answer", label: "Answer", widget: "text" }
 
   - name: "contact"
-    label: "FAQ"
-    folder: "src/content/FAQ"
+    label: "Contact"
+    folder: "src/content/contact"
     format: "json"
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "question", label: "Question", widget: "string" }
-      - { name: "answer", label: "Answer", widget: "string" }
-
-  - name: ""
-    label: ""
-    folder: "src/content/"
-    format: "json"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "", label: "", widget: "" }
-      - { name: "", label: "", widget: "" }
+      - { name: "label", label: "Label", widget: "string" }
+      - { name: "value", label: "Value", widget: "string" }
