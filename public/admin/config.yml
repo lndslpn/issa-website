@@ -50,3 +50,11 @@ collections:
     fields:
       - { name: "label", label: "Label", widget: "string" }
       - { name: "value", label: "Value", widget: "string" }
+
+  - name: "resources"
+    label: "Resources"
+    folder: "src/content/resources"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    fields:
