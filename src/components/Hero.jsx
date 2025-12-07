@@ -24,7 +24,7 @@ export default function Hero() {
             </p>
   
             {/* Main card */}
-            <div className="bg-lighttanback text-center rounded-3xl shadow-[0_18px_40px_rgba(0,0,0,0.18)] px-8 py-10 md:px-12 md:py-12 ml-6">
+            <div className="bg-lighttanback text-center rounded-3xl shadow-[0_18px_40px_rgba(0,0,0,0.18)] px-8 py-10 md:px-12 md:py-12">
               <h1 className="text-greentxt font-instrument font-bold text-4xl md:text-5xl leading-tight mb-4">
                 Indigenous in STEM Student Association (ISSA)
               </h1>
