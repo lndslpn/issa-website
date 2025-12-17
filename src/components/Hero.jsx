@@ -14,7 +14,7 @@ export default function Hero() {
             <p className="text-tantxt font-instrument text-lg mb-4 text-center">
               <Typewriter
                 options={{
-                  strings: ['Tansi','Hello', 'Kwey'],
+                  strings: ['Tansi','Hello', 'Kwey','Oki','Aanii','Taanishi'],
                   autoStart: true,
                   loop: true,
                   delay: 80,

@@ -47,14 +47,38 @@ collections:
     format: "json"
     create: true
     slug: "{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { name: "label", label: "Label", widget: "string" }
-      - { name: "value", label: "Value", widget: "string" }
+      - { name: "value", label: "Display Text", widget: "string" }
+      - { name: "url", label: "Link URL", widget: "string" }
 
-  - name: "resources"
-    label: "Resources"
-    folder: "src/content/resources"
+  - name: "resources1"
+    label: "Resources1"
+    folder: "src/content/articles"
     format: "json"
     create: true
     slug: "{{slug}}"
     fields:
+      - { name: "label", label: "Label", widget: "string" }
+      - { name: "url", label: "Link URL", widget: "string" }
+
+  - name: "resources2"
+    label: "Resources2"
+    folder: "src/content/associations"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "label", label: "Label", widget: "string" }
+      - { name: "url", label: "Link URL", widget: "string" }
+
+  - name: "resources3"
+    label: "Resources3"
+    folder: "src/content/bulletin"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "label", label: "Label", widget: "string" }
+      - { name: "url", label: "Link URL", widget: "string" }

@@ -39,10 +39,17 @@ export default function Executives() {
               <div className="bg-offwhite w-full h-64 rounded-2xl" />
             )}
 
-            {/* Name */}
+            {/* Name - Now with 'capitalize' */}
             {exec.name && (
-              <p className="mt-4 text-greentxt font-inria text-lg">
+              <p className="mt-4 text-greentxt font-inria text-lg capitalize font-bold">
                 {exec.name}
+              </p>
+            )}
+
+            {/* Bio - New Section */}
+            {exec.bio && (
+              <p className="mt-2 text-greentxt font-inria text-sm text-center opacity-90">
+                {exec.bio}
               </p>
             )}
           </div>

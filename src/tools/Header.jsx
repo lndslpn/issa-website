@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-6xl flex flex-wrap items-center justify-center">
         <div className="flex h-10 items-center justify-between">
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-25">
+          <nav className="hidden md:flex items-center gap-15">
             {links.map((l) => {
               const isActive = location.pathname === l.href;
 
