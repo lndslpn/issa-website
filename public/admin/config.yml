@@ -47,7 +47,6 @@ collections:
     format: "json"
     create: true
     slug: "{{slug}}"
-    slug: "{{slug}}"
     fields:
       - { name: "label", label: "Label", widget: "string" }
       - { name: "value", label: "Display Text", widget: "string" }
