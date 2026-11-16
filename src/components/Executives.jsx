@@ -4,7 +4,17 @@ export default function Executives() {
 
   const execs = Object.values(files).map((mod) => mod.default);
 
-  const activeRoles = execs.filter((e) => !e.vacant);
+  const rolePriority = {
+    "Co-President": 0,
+    "Vice President": 1,
+  };
+
+  const activeRoles = execs
+    .filter((e) => !e.vacant)
+    .sort(
+      (a, b) =>
+        (rolePriority[a.role] ?? 2) - (rolePriority[b.role] ?? 2),
+    );
   const vacantRoles = execs.filter((e) => e.vacant);
 
   return (

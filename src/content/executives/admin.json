@@ -1,7 +1,7 @@
 {
-    "name": "Sample Exec",
+    "name": "Jill Hawkins",
     "role": "VP Admin",
-    "bio": "vacant position",
-    "photo": "",
-    "vacant":true
+    "bio": "Student.",
+    "photo": "/images/uploads/blank.jpeg",
+    "vacant":false
   }  
